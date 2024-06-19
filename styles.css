@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.personal-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.block {
+    background-color: #333;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+}
+
+.projects, .certificates {
+    padding: 20px;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+h2 {
+    color: #66b2ff;
+}
+
+a{
+    color: #66b2ff;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project, .certificate {
+    min-width: 300px;
+    max-width: 600px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.project img{
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.certificate img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .personal-info {
+        flex-direction: column;
+    }
+}
