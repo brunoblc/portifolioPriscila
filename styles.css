@@ -1,13 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
+    background-image: url(./img/fundo.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden; /* Remove scroll horizontal */
 }
 
 header {
-    background-color: #1a1a1a;
+    background-color: transparent;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -19,27 +22,50 @@ header {
     flex-wrap: wrap;
 }
 
-.block {
-    background-color: #333;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    flex: 1;
-    min-width: 300px;
-    max-width: 45%;
+.personal-info a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 30px;
 }
 
-.projects, .certificates {
-    padding: 20px;
-    background-color: #2a2a2a;
+.personal-info img {
+    margin-right: 8px;
+}
+
+.redesocial {
+    margin-top: 50px;
+}
+
+.block-personal, .block-resume, .projects, .certificates, .block-exper {
+    background-color: rgba(151, 151, 151, 0.10);
+    padding: 30px;
+    margin: 10px;
+    border-radius: 16px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 100%;
+    text-align: left;
     color: #fff;
 }
 
-h2 {
-    color: #66b2ff;
+h1 {
+    text-align: left;
+    margin: 20px;
+    font-size: 80px;
+    font-family: 'Tektur', sans-serif;
 }
 
-a{
+h2 {
+    font-family: 'Tektur', sans-serif;
+    color: #fff;
+}
+
+h3 {
+    font-family: 'Tektur', sans-serif;
+    color: #00d1ff;
+}
+
+a {
     color: #66b2ff;
 }
 
@@ -47,55 +73,102 @@ a{
     position: relative;
     width: 100%;
     overflow: hidden;
+    touch-action: pan-y; /* Permite deslizar com o dedo */
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    will-change: transform; /* Melhora o desempenho de animações */
 }
 
 .project, .certificate {
     min-width: 300px;
-    max-width: 600px;
-    background-color: #444;
+    max-width: 700px;
+    background-color: rgba(151, 151, 151, 0.10);
     padding: 20px;
     border-radius: 5px;
     margin-right: 20px;
 }
 
-.project img{
-    max-width: 180px;
-    height: 300px;
-    border-radius: 5px;
-}
-
-.certificate img {
+.project img, .certificate img {
     max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+    margin: auto;
 }
 
 button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: transparent;
     border: none;
-    padding: 10px;
     cursor: pointer;
+    padding: 10px;
 }
 
-button.prev {
-    left: 0;
+button.prev img, button.next img {
+    width: 30px;
+    height: 30px;
 }
 
 button.next {
-    right: 0;
+    right: 10px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    .project, .certificate {
+        min-width: 250px;
+    }
+
+    .block-personal, .block-resume {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .personal-info {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 768px) {
-    .personal-info {
-        flex-direction: column;
+    h1 {
+        font-size: 40px;
+    }
+
+    .project, .certificate {
+        min-width: 200px;
+    }
+
+    .projects, .certificates {
+        padding: 16px;
+    }
+
+    button.prev, button.next {
+        padding: 5px;
+    }
+
+    button.prev img, button.next img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .project, .certificate {
+        min-width: 150px;
+    }
+
+    .block-personal, .block-resume {
+        padding: 20px;
     }
 }

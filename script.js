@@ -5,23 +5,54 @@ document.addEventListener('DOMContentLoaded', function() {
     carousels.forEach(carouselContainer => {
         const carousel = carouselContainer.querySelector('.carousel');
         const items = carousel.querySelectorAll('.project, .certificate');
-        const prevButton = carouselContainer.querySelector('.prev');
         const nextButton = carouselContainer.querySelector('.next');
         
         let currentIndex = 0;
+        const maxIndex = items.length - 1;
 
         function showItem(index) {
             const itemWidth = items[0].clientWidth + parseInt(getComputedStyle(items[0]).marginRight);
-            carousel.style.transform = `translateX(${-index * itemWidth}px)`;
+            const translateX = -index * itemWidth;
+            carousel.style.transform = `translateX(${translateX}px)`;
         }
 
-        prevButton.addEventListener('click', function() {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+        nextButton.addEventListener('click', function() {
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Volta ao início
+            }
             showItem(currentIndex);
         });
 
-        nextButton.addEventListener('click', function() {
-            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+        // Suporte ao toque
+        let startX = 0;
+        let endX = 0;
+
+        carousel.addEventListener('touchstart', function(event) {
+            startX = event.touches[0].clientX;
+        });
+
+        carousel.addEventListener('touchmove', function(event) {
+            endX = event.touches[0].clientX;
+        });
+
+        carousel.addEventListener('touchend', function() {
+            if (startX > endX) {
+                // Deslize para a esquerda
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0; // Volta ao início
+                }
+            } else if (startX < endX) {
+                // Deslize para a direita
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = maxIndex; // Volta ao fim
+                }
+            }
             showItem(currentIndex);
         });
 

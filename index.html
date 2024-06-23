@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Priscila Mariano</h1>
         <div class="personal-info">
-            <div class="block">
+            <div class="block-personal">
                 <h2>CONTATO</h2>
-                <p>Cel:(11) 9 6442-8191</p>
+                <p>Cel:(11) 96442-8191</p>
                 <p>Email: priscila_mariano@hotmail.com.br</p>
-                <p>Redes Sociais: 
-                    <a href="https://www.linkedin.com/in/priscila-mariano-a43474106/">LinkedIn</a> | 
-                    <a href="https://github.com/Priscila-Mariano">GitHub</a> | 
-                </p>
+                <p class="redesocial">Redes Sociais:</p>
+                <br>
+                <a href="https://www.linkedin.com/in/priscila-mariano-a43474106/">
+                    <img src="./img/linkedinlogo.svg" alt="LinkedIn Logo">LinkedIn
+                </a>
+                <a href="https://github.com/Priscila-Mariano">
+                    <img src="./img/githublogo.svg" alt="Github Logo">GitHub
+                </a>
             </div>
-            <div class="block">
+            <div class="block-resume">
                 <h2>RESUMO</h2>
-                <br>Product Designer com ampla experiência em User Experience (UX) e User Interface (UI), especializado em wireframing, prototipagem e testes de usabilidade em desktop e mobile.<br><br>
+                <p>Product Designer com ampla experiência em User Experience (UX) e User Interface (UI), especializado em wireframing, prototipagem e testes de usabilidade em desktop e mobile.<br><br>
                 Proficiente em ferramentas como Figma, sólidos conhecimentos em desenvolvimento e manutenção de sistemas de design.<br><br>
                 Trabalhando com os conceitos do double diamond, desde o problema/desafio, considerando as etapas dos erros e aprendizados, até a entrega final. Utilizando metodologias de Design Thinking e Product Discovery para criar soluções inovadoras, melhorando a experiência do usuário e alcançando os objetivos de negócios.</p>
             </div>
@@ -31,61 +39,92 @@
     <section class="projects">
         <h2>Projetos</h2>
         <div class="carousel-container">
-            <button class="prev">&#10094;</button>
             <div class="carousel">
                 <div class="project">
-                    <img src="./img/projeto1.JPG" alt="Projeto 1">
-                    <h3>Projeto Casa de Apostas</h3>
-                    <p>Aqui segue uma visão de um projeto <br> feito em Figma para Mobile e Desktop</p>
-                    <p>Experimente o APP: <a href="https://www.figma.com/proto/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-3982&t=RojT0Vph50qo4xu5-0&scaling=min-zoom&content-scaling=fixed&page-id=4%3A3374" target="_blank">Figma - Experiência</a></p>
-                    <p>Para ver o técnico: <a href="https://www.figma.com/design/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-3374" target="_blank">Figma - Experiência</a></p>
+                    <img src="./img/ProjLume.jpeg" alt="Projeto Lume">
+                    <h3>Lume - <br> Educação fundamental 1 e 2</h3>
+                    <p>Abaixo segue a visualização do projeto desenvolvida em mobile pelo Figma.</p>
+                    <p>Experimente o APP: <br> <a href="https://www.figma.com/proto/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?page-id=4%3A22782&node-id=4-22803&viewport=269%2C595%2C0.21&t=WhsBJujIXFsN1Hth-1&scaling=min-zoom&content-scaling=fixed" target="_blank">Figma - Experiência</a></p>
+                    <p>Para ver o técnico: <br> <a href="https://www.figma.com/design/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-22782&t=z5QwcA4Yhh9ScQTl-1" target="_blank">Figma - Técnico</a></p>
                 </div>
                 <div class="project">
-                    <img src="./img/projeto2.JPG" alt="Projeto 1">
-                    <h3>Projeto Casa de Apostas</h3>
-                    <p>Aqui segue uma visão de um projeto <br> feito em Figma para Mobile e Desktop</p>
-                    <p>Experimente o APP: <a href="https://www.figma.com/proto/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-3982&t=RojT0Vph50qo4xu5-0&scaling=min-zoom&content-scaling=fixed&page-id=4%3A3374" target="_blank">Figma - Experiência</a></p>
-                    <p>Para ver o técnico: <a href="https://www.figma.com/design/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-3374" target="_blank">Figma - Experiência</a></p>
+                    <img src="./img/ProjElderly.jpeg" alt="Projeto Elderly">
+                    <h3>Elderly Care -<br> Controle e cuidado com idosos</h3>
+                    <p>Abaixo segue a visualização do projeto desenvolvida em mobile pelo Figma.</p>
+                    <p>Experimente o APP:<br> <a href="https://www.figma.com/proto/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?page-id=4%3A15310&node-id=4-15854&viewport=1305%2C353%2C0.38&t=aCybLOztgGFzIM7u-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4%3A15854" target="_blank">Figma - Experiência</a></p>
+                    <p>Para ver o técnico: <br><a href="https://www.figma.com/design/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-15854&t=z5QwcA4Yhh9ScQTl-1" target="_blank">Figma - Técnico</a></p>
                 </div>
                 <div class="project">
-                    <img src="./img/projeto3.JPG" alt="Projeto 1">
-                    <h3>Projeto Casa de Apostas</h3>
-                    <p>Aqui segue uma visão de um projeto <br> feito em Figma para Mobile e Desktop</p>
-                    <p>Experimente o APP: <a href="https://www.figma.com/proto/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-3982&t=RojT0Vph50qo4xu5-0&scaling=min-zoom&content-scaling=fixed&page-id=4%3A3374" target="_blank">Figma - Experiência</a></p>
-                    <p>Para ver o técnico: <a href="https://www.figma.com/design/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-3374" target="_blank">Figma - Experiência</a></p>
+                    <img src="./img/ProjSifter.jpeg" alt="Projeto Sifter">
+                    <h3>Sifter - App de viagens</h3>
+                    <p><br>Abaixo segue a visualização do projeto desenvolvida em mobile pelo Figma.</p>
+                    <p>Experimente o APP: <br><a href="https://www.figma.com/proto/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?page-id=4%3A7009&node-id=4-10714&viewport=395%2C331%2C0.1&t=nnr8s5DiCRQWppFv-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4%3A10689&show-proto-sidebar=1" target="_blank">Figma - Experiência</a></p>
+                    <p>Para ver o técnico: <br><a href="https://www.figma.com/design/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-7009&t=z5QwcA4Yhh9ScQTl-1" target="_blank">Figma - Técnico</a></p>
                 </div>
                 <div class="project">
-                    <img src="./img/projeto1.JPG" alt="Projeto 1">
-                    <h3>Projeto Casa de Apostas</h3>
-                    <p>Aqui segue uma visão de um projeto <br> feito em Figma para Mobile e Desktop</p>
-                    <p>Experimente o APP: <a href="https://www.figma.com/proto/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-3982&t=RojT0Vph50qo4xu5-0&scaling=min-zoom&content-scaling=fixed&page-id=4%3A3374" target="_blank">Figma - Experiência</a></p>
-                    <p>Para ver o técnico: <a href="https://www.figma.com/design/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-3374" target="_blank">Figma - Experiência</a></p>
+                    <img src="./img/projCasaAposta.jpeg" alt="Projeto App de Apostas">
+                    <h3>App casa de apostas</h3>
+                    <p><br>Abaixo segue a visualização do projeto desenvolvida em mobile pelo Figma.</p>
+                    <p>Experimente o APP: <br><a href="https://www.figma.com/proto/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?page-id=4%3A3374&node-id=4-3982&viewport=905%2C301%2C0.2&t=X3pK4XB8CYs84ZJ0-1&scaling=min-zoom&content-scaling=fixed" target="_blank">Figma - Experiência</a></p>
+                    <p>Para ver o técnico:<br> <a href="https://www.figma.com/design/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-3374&t=z5QwcA4Yhh9ScQTl-1" target="_blank">Figma - Técnico</a></p>
                 </div>
-            <button class="next">&#10095;</button>
+                <div class="project">
+                    <img src="./img/ProjWebBanco.jpeg" alt="Projeto Web Banco">
+                    <h3>Home - App bancário</h3>
+                    <p><br>Abaixo segue a visualização do projeto desenvolvida em desktop pelo Figma.</p>
+                    <p>Link: <br><a href="https://www.figma.com/design/PUExKiLbYn4uvtUhENA0Dr/Portif%C3%B3lio---Evolu%C3%A7%C3%A3o-de-projetos?node-id=4-14711&t=z5QwcA4Yhh9ScQTl-1" target="_blank">Figma - Visão</a></p>
+                </div>
+            </div>
+            <button class="next"><img src="https://cdn-icons-png.flaticon.com/512/10624/10624264.png" alt="Next"></button>
         </div>
     </section>
     
     <section class="certificates">
         <h2>Certificados e Formações</h2>
         <div class="carousel-container">
-            <button class="prev">&#10094;</button>
             <div class="carousel">
                 <div class="certificate">
-                    <img src="./img/Capturar.JPG" alt="Certificado Alura">
+                    <img src="./cert/CoderFigma.jpeg" alt="Certificado Coder">
                 </div>
                 <div class="certificate">
-                    <img src="./img/Capturar1.JPG" alt="Certificado Alura">
+                    <img src="./cert/CoderDesingUXUI.jpeg" alt="Certificado Coder">
                 </div>
                 <div class="certificate">
-                    <img src="./img/Capturar.JPG" alt="Certificado Alura">
+                    <img src="./cert/CoderProductMan.jpeg" alt="Certificado Coder">
                 </div>
                 <div class="certificate">
-                    <img src="./img/Capturar1.JPG" alt="Certificado Alura">
+                    <img src="./cert/CoderDevWeb.jpeg" alt="Certificado Coder">
+                </div>
+                <div class="certificate">
+                    <img src="./cert/ux - entenda a experiência de usuário.jpeg" alt="Certificado Alura">
+                </div>
+                <div class="certificate">
+                    <img src="./cert/ux - Starategy.jpeg" alt="Certificado Alura">
+                </div>
+                <div class="certificate">
+                    <img src="./cert/ux usability - facilite a vida do seu usuário no mobile.JPG" alt="Certificado Alura">
+                </div>
+                <div class="certificate">
+                    <img src="./cert/design system - criando componentes e documentando.jpeg" alt="Certificado Alura">
+                </div>
+                <div class="certificate">
+                    <img src="./cert/design system - projetando elementos.jpeg" alt="Certificado Alura">
+                </div>
+                <div class="certificate">
+                    <img src="./cert/design system-definindo estilos e tokens.jpeg" alt="Certificado Alura">
+                </div>
+                <div class="certificate">
+                    <img src="./cert/canva - editando imagens.JPG" alt="Certificado Alura">
                 </div>
             </div>
-            <button class="next">&#10095;</button>
+            <button class="next"><img src="https://cdn-icons-png.flaticon.com/512/10624/10624264.png" alt="Next"></button>
         </div>
     </section>
+
+    <div class="block-exper">
+        <h2>Experiência em Design de Produto e UI/UX</h2>
+        <p>Product Designer com ampla experiência em User Experience (UX) e User Interface (UI), especializado em wireframing, prototipagem e testes de usabilidade em desktop e mobile. Proficiente em ferramentas como Figma, sólidos conhecimentos em desenvolvimento e manutenção de sistemas de design. Trabalhando com os conceitos do double diamond, desde o problema/desafio, considerando as etapas dos erros e aprendizados, até a entrega final. Utilizando metodologias de Design Thinking e Product Discovery para criar soluções inovadoras, melhorando a experiência do usuário e alcançando os objetivos de negócios.</p>
+    </div>
 
     <script src="script.js"></script>
 </body>
