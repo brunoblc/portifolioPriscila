@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
     const carousels = document.querySelectorAll('.carousel-container');
 
@@ -58,4 +57,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
         showItem(currentIndex);
     });
+
+    // Código para abrir o modal ao clicar na imagem
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const images = document.querySelectorAll('.certificate img');
+    const span = document.getElementsByClassName("close")[0];
+
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        });
+    });
+
+    // Fecha o modal ao clicar no botão de fechar
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Fecha o modal ao clicar fora da imagem
+    modal.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 });
