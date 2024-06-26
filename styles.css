@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: "Inter", sans-serif;
-    overflow-x: hidden; /* Remove scroll horizontal */
+    overflow-x: hidden; 
 }
 
 header {
@@ -23,7 +23,7 @@ header {
     padding: 0;
     width: 100%;
     margin: -20px;
-    box-sizing: border-box; /* Inclui padding e border na largura */
+    box-sizing: border-box; 
 }
 
 .personal-info a {
@@ -52,13 +52,13 @@ header {
 .block-personal {
     flex: 1 1 30%;
     min-width: 300px;
-    box-sizing: border-box; /* Inclui padding e border na largura */
+    box-sizing: border-box; 
 }
 
 .block-resume {
     flex: 1 1 70%;
     min-width: 300px;
-    box-sizing: border-box; /* Inclui padding e border na largura */
+    box-sizing: border-box;
 }
 
 h1 {
@@ -86,13 +86,13 @@ a {
     position: relative;
     width: 100%;
     overflow: hidden;
-    touch-action: pan-y; /* Permite deslizar com o dedo */
+    touch-action: pan-y; 
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    will-change: transform; /* Melhora o desempenho de animações */
+    will-change: transform; 
 }
 
 .project, .certificate {
@@ -100,13 +100,16 @@ a {
     max-width: 700px;
     background-color: rgba(151, 151, 151, 0.10);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 16px;
     margin-right: 20px;
 }
 
 .project img, .certificate img {
     max-width: 100%;
     margin: auto;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
 }
 
 button.prev, button.next {

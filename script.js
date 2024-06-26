@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentIndex < maxIndex) {
                 currentIndex++;
             } else {
-                currentIndex = 0; // Volta ao início
+                currentIndex = 0; 
             }
             showItem(currentIndex);
         });
 
-        // Suporte ao toque
+        // Toque na tela
         let startX = 0;
         let endX = 0;
 
@@ -38,18 +38,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         carousel.addEventListener('touchend', function() {
             if (startX > endX) {
-                // Deslize para a esquerda
+                // Deslizando esquerda
                 if (currentIndex < maxIndex) {
                     currentIndex++;
                 } else {
                     currentIndex = 0; // Volta ao início
                 }
             } else if (startX < endX) {
-                // Deslize para a direita
+                // Agora direita
                 if (currentIndex > 0) {
                     currentIndex--;
                 } else {
-                    currentIndex = maxIndex; // Volta ao fim
+                    currentIndex = maxIndex; 
                 }
             }
             showItem(currentIndex);
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showItem(currentIndex);
     });
 
-    // Código para abrir o modal ao clicar na imagem
+    // Expandir imagem (Modal)
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
     const images = document.querySelectorAll('.certificate img');
@@ -71,12 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Fecha o modal ao clicar no botão de fechar
+
     span.onclick = function() {
         modal.style.display = "none";
     }
 
-    // Fecha o modal ao clicar fora da imagem
     modal.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
